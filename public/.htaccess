@@ -1,0 +1,5 @@
+Options -Indexes +FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^/([a-z0-9]{1,8})
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?key=$1 [L]
