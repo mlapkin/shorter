@@ -39,7 +39,7 @@
 					url : this.action ? this.action : window.location,
 					type: 'POST',
 					data : $(this).serializeArray(),
-					success:function(data)
+					success: function(data)
 					{
 						if (data.result)
 						{
@@ -54,12 +54,12 @@
 							$('#result').html(data.message);
 						}
 					},
-					error: function(jqXHR, textStatus, errorThrown)
+					error: function()
 					{
 						alert('Failed to shorten URL, try again');
 					}
 				});
-			e.preventDefault(); //STOP default action
+			e.preventDefault();
 		});	});
 </script>
 </body>
